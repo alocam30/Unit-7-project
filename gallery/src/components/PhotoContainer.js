@@ -6,8 +6,8 @@ import { useParams } from "react-router-dom";
 
 
 function PhotoContainer(props) {
-    const [ loading, setLoading]  = React.useState(null);
-    const [ data, setData]  = React.useState([]);
+    // const [ loading, setLoading]  = React.useState(null);
+    const [ data, setData]  = useState(false);
     let params = useParams();
 
     let fetchTerm = params.searchTerm ? params.searchTerm: props.title;

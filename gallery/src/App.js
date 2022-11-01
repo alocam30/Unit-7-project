@@ -22,11 +22,11 @@ function App(props) {
         <Nav />
         <Routes>
             <Route path="/" element={<Navigate to="/cafes" />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="/cities" element={<PhotoContainer data="cities" />} />
             <Route path="/cafes" element={<PhotoContainer data="cafes" />} />
             <Route path="/computers" element={<PhotoContainer data="computers" />} />
             <Route path="/search/:keyword" element={<PhotoContainer />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     </div>
     </BrowserRouter>
