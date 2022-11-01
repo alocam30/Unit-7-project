@@ -10,9 +10,9 @@ function PhotoContainer(props) {
     const [ data, setData]  = useState(false);
     let params = useParams();
 
-    let fetchTerm = params.searchKeyword ? params.searchKeyword: props.title;
+    let fetchTerm = params.keyword ? params.keyword: props.data;
 
-    useEffect((fetchTerm) => {
+    useEffect(() => {
         fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${fetchTerm}&per_page=24&format=json&nojsoncallback=1`)
         .then(results => results.json())
         .then (data => {
