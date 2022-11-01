@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-function SearchForm(props) {
+const SearchForm = (props) => {
     const [searchInput, setSearchInput] = useState("");
     const navigate = useNavigate();
     const path = `search/${searchInput}`     
