@@ -16,7 +16,6 @@ import Nav from "./components/Nav";
 function App(props) {
 
   return (
-    <BrowserRouter>
     <div className="container">
         <SearchForm   />
         <Nav />
@@ -29,7 +28,6 @@ function App(props) {
             <Route path="*" element={<NotFound />} />
         </Routes>
     </div>
-    </BrowserRouter>
   );
   }
 
