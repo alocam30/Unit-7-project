@@ -1,20 +1,33 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+// import Photo from "./Photo";
 
-const SearchForm = (props) => {
+const SearchForm = () => {
 
   const [searchInput, setSearchInput] = useState("");
   const navigate = useNavigate();
   const path = `search/${searchInput}`;   
 
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   setSearchInput(e.target.value);
+    //   onSearch(searchInput);
+    //   navigate(path);
+
+    // };
+
     const handleSubmit = (e) => {
       e.preventDefault();
       setSearchInput(e.target.value);
-      props.onSearch(searchInput);
       navigate(path);
-
     };
+    
+    // if (searchInput.length > 0) {
+    //     Photo.filter((`${props.photo.id}`) => {
+    //     return country.name.match(searchInput);
+    // });
+    // }
 
 
     return (
